@@ -29,6 +29,13 @@ Dodatkowo należy umożliwić przetwarzanie listy zakupów i obliczenie całkowi
 - oddzielenie logiki cen od agregacji danych
 - czytelne obliczanie ceny końcowej
 
+### Struktura plików
+
+-solution.py: Definicje klas i logika obliczeń.
+-run.py: Skrypt startowy obsługujący CLI i przetwarzanie plików.
+-data.json: Przykładowy zestaw danych wejściowych.
+
+
 ---
 
 ## 🇬🇧 Description
@@ -57,3 +64,9 @@ Additionally, the system should allow processing a list of purchases and calcula
 - model products and their behavior correctly
 - separate pricing logic from data aggregation
 - implement clear and readable final price calculation
+
+### File structure
+
+- solution.py: Class definitions and core logic.
+- run.py: Entry point handling CLI and data processing.
+- data.json: Sample input data.
