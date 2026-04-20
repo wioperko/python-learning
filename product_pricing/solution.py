@@ -92,26 +92,3 @@ class ProductService:
                 lines.append(f"  - {p}")
         return "\n".join(lines)
 
-
-def main():
-    try:
-
-        p1 = Product('PA1', 'A', Decimal('100'), Decimal('0.0'))
-        p2 = Product('PA2', 'A', Decimal('100'), Decimal('0.0'))
-        ep1 = ExtraProduct('PB1', 'B', Decimal('100'), Decimal('0.1'), {0, 1}, Decimal('0.05'))
-        ep2 = ExtraProduct('PB2', 'B', Decimal('100'), Decimal('0.1'), {2, 3}, Decimal('0.05'))
-
-        productservice = ProductService()
-        productservice.add_product(p1, 0)
-        productservice.add_product(p2, 0)
-        productservice.add_product(ep1, 1)
-        productservice.add_product(ep2, 1)
-        print(productservice)
-        print(productservice.calc_total_price())
-     
-    except Exception as e:
-       print(e.args[0])
-
-
-if __name__ == "__main__":
-    main()
