@@ -1,0 +1,12 @@
+[
+  {"name": "Bleach", "category": "Cleaning", "price": "10.00", "tax": "0.10", "day": 0},
+  {"name": "Dish Soap", "category": "Cleaning", "price": "100.00", "tax": "0.10", "day": 0, "discount": "0.20", "discount_days": [0]},
+  {"name": "Window Spray", "category": "Cleaning", "price": "50.00", "tax": "0.20", "day": 1},
+  {"name": "Floor Liquid", "category": "Cleaning", "price": "100.00", "tax": "0.20", "day": 1, "discount": "0.50", "discount_days": [1]},
+  {"name": "Hand Soap", "category": "Personal", "price": "20.00", "tax": "0.00", "day": 2},
+  {"name": "Bath Foam", "category": "Personal", "price": "200.00", "tax": "0.10", "day": 2, "discount": "0.10", "discount_days": [0, 1]},
+  {"name": "Sponge Pack", "category": "Acc", "price": "5.00", "tax": "0.00", "day": 3},
+  {"name": "Paper Towels", "category": "Acc", "price": "10.00", "tax": "0.10", "day": 3, "discount": "0.50", "discount_days": [3]},
+  {"name": "Toilet Gel", "category": "Cleaning", "price": "30.00", "tax": "0.10", "day": 4},
+  {"name": "Air Freshener", "category": "Cleaning", "price": "40.00", "tax": "0.10", "day": 4, "discount": "0.25", "discount_days": [4]}
+]
