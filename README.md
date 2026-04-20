@@ -15,10 +15,13 @@ Celem jest rozwijanie umiejętności rozwiązywania problemów, pisania czytelne
 
 Każdy folder odpowiada jednemu zadaniu:
 
+### Struktura 
 01_task_name/
-├── task.md # opis zadania
-├── solution.py # rozwiązanie
-└── notes.md # wnioski i decyzje (opcjonalnie)
+├── task.md        # Opis zadania
+├── solution.py    # Logika biznesowa
+├── run.py         # CLI runner
+├── data.json      # Dane wejściowe
+└── notes.md       # Wnioski i decyzje
 
 
 ### Założenia
@@ -50,9 +53,11 @@ The focus is on problem-solving, code readability, and building a solid foundati
 Each directory represents a separate task:
 
 01_task_name/
-├── task.md # task description
-├── solution.py # implementation
-└── notes.md # notes and decisions (optional)
+├── task.md        # Task description
+├── solution.py    # Core logic (classes)
+├── run.py         # CLI runner (argparse, JSON loading)
+├── data.json      # Input data
+└── notes.md       # Notes and decisions
 
 ### Approach
 - each task is treated as an independent problem

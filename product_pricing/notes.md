@@ -18,6 +18,13 @@ Zniżka jest stosowana po doliczeniu podatku.
 - brak ustawienia dnia oznacza domyślnie dzień `0`
 - `discount_days` definiuje stałą konfigurację produktu
 
+
+### Separacja warstw
+Logika biznesowa została całkowicie oddzielona od interfejsu użytkownika.
+Klasy w solution.py nie wiedzą o istnieniu terminala czy plików JSON.
+
+### Dynamiczne wczytywanie
+Zastosowano moduł argparse, co pozwala na testowanie różnych scenariuszy cenowych bez edycji kodu źródłowego.
 ---
 
 ## 🇬🇧 Price calculation approach
@@ -37,3 +44,10 @@ Discount is applied after tax is included.
 - weekday is stored as object state (`_current_day`)
 - default day is `0` if not explicitly set
 - `discount_days` defines static product configuration
+
+### Separation of Concerns
+Business logic is decoupled from the UI. 
+Classes in solution.py are independent of terminal interactions or JSON parsing.
+
+### Dynamic Loading
+Implemented argparse to allow testing various pricing scenarios via external JSON files without modifying the source code.
