@@ -32,8 +32,8 @@ class MeetingService:
         self.meetings.append(meeting)
 
     def get_upcoming_meeting(self) -> list[Meeting]:
-        return [m for m in self.meetings if m.is_upcoming]
-        
+        upcoming_meetings = [m for m in self.meetings if m.is_upcoming]
+        return sorted(upcoming_meetings, key = lambda m: m.meeting_datetime)
 
 
 def main() -> None:
