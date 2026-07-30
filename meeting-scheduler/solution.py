@@ -22,7 +22,20 @@ class Meeting:
     
     def __repr__(self):
         return f'Meeting(ID={self.meeting_id}, DATETIME={self.meeting_datetime}, DESCRIPTION={self.description})'
-    
+
+class MeetingService:
+
+    def __init__(self, meetings: list[Meeting] | None = None):
+        self.meetings = meetings if meetings is not None else []
+
+    def add_meeting(self, meeting: Meeting) -> None:
+        self.meetings.append(meeting)
+
+    def get_upcoming_meeting(self) -> list[Meeting]:
+        return [m for m in self.meetings if m.is_upcoming]
+        
+
+
 def main() -> None:
     m1 = Meeting(1, 'Project kickoff', datetime(2026, 7, 6, 23, 0, tzinfo=pytz.timezone('Europe/Warsaw')))
     m2 = Meeting(2, 'Team standup', datetime(2026, 8, 28, 10, 0, tzinfo=pytz.timezone('America/New_York')))
