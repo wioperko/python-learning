@@ -41,3 +41,20 @@ def test_should_return_meetings_sorted_by_date():
     result = meeting_service.get_upcoming_meeting()
 
     assert result == [m2, m1, m3]
+
+def test_should_return_today_meetings():
+
+    current_sys_time = datetime.now()
+
+    m1 = Meeting(1, 'Yesterday', current_sys_time - timedelta(days=1))
+    m2 = Meeting(2, 'Today_morning', current_sys_time.replace(hour = 9))
+    m3 = Meeting(3, 'Today evening', current_sys_time.replace(hour=16))
+    m4 = Meeting(4, 'Tomorrow', current_sys_time + timedelta(days =1))
+
+    meetings = [m1,m2,m3,m4]
+
+    meeting_service = MeetingService(meetings)
+
+    result = meeting_service.get_today_meetings()
+
+    assert result == [m2, m3]

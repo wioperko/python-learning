@@ -35,6 +35,9 @@ class MeetingService:
         upcoming_meetings = [m for m in self.meetings if m.is_upcoming]
         return sorted(upcoming_meetings, key = lambda m: m.meeting_datetime)
 
+    def get_today_meetings(self) -> list[Meeting]:
+        return [m for m in self.meetings if m.is_today]
+
 
 def main() -> None:
     m1 = Meeting(1, 'Project kickoff', datetime(2026, 7, 6, 23, 0, tzinfo=pytz.timezone('Europe/Warsaw')))
